@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Finlandica Text", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    transition: transform 0.4s ease;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: clamp(55px, 4vw, 70px);
+    height: auto;
+    object-fit: contain;
+    filter: invert(100%);
+    transition: 0.7s ease;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.active {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: clamp(20px, 1.3vw, 20px);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: rgb(70, 70, 70);
+    transition: .3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 1px;
+    font-size: clamp(22px, 2.2vw, 36px);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+h3 {
+    position: relative;
+    display: inline-block;
+    font-size: clamp(18px, 1.8vw, 21px);
+}
+
+h3::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    width: 20%;
+    height: 2px;
+    background: #ffffff;
+}
+
+h2::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 10%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+body {
+    background: #000000;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 45px 10px;
+    margin-top: 100px;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 500px;
+    padding: 0 10px;
+}
+
+.txt1 {
+    font-size: clamp(32px, 5vw, 80px);
+    max-width: 300px;
+    font-weight: 700;
+}
+
+.img-section-1 {
+    width: clamp(480px, 52vw, 750px);
+    height: auto;
+    transition: 0.7s;
+    border-radius: 120px 120px 120px 40px;
+    filter: grayscale(50%);
+}
+
+.img-section-1:hover {
+    transform: scale(1.03);
+    filter: grayscale(30%) brightness(1.1);
+}
+
+.p {
+    font-size: clamp(16px, 1.5vw, 25px);
+    max-width: 500px;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.time-img-1,
+.time-img-2,
+.time-img-3,
+.time-img-4 {
+    width: clamp(140px, 18vw, 260px);
+    height: auto;
+    border-radius: 100px;
+    transition: 0.7s ease;
+    filter: grayscale(85%) brightness(0.8);
+}
+
+.time-img-1:hover,
+.time-img-2:hover,
+.time-img-3:hover,
+.time-img-4:hover {
+    filter: grayscale(0%) brightness(1.3);
+    transform: scale(1.02);
+}
+
+.teams-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-img-2 {
+    position: relative;
+    top: 11px;
+}
+
+.time-img-4 {
+    position: relative;
+    bottom: 7px;
+}
+
+.time-img-3 {
+    width: clamp(160px, 20vw, 290px);
+    height: auto;
+    position: relative;
+    top: 5px;
+    border-radius: 0 0 100% 100%;
+}
+
+.time-img-1 {
+    margin: 0 0 0 10px;
+}
+
+.time-h2 {
+    margin: 0 0 0 30px;
+    font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
+}
+
+.time-h22 {
+    margin: 0 0 0 0;
+    font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
+}
+
+.img-article,
+.img-article2,
+.img-article3 {
+    border-radius: 10px 60px 60px 40px;
+    transition: 0.5s ease;
+    filter: grayscale(70%) brightness(0.9);
+    width: clamp(260px, 30vw, 380px);
+    height: 380px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0 0 0 30px;
+}
+
+.img-article:hover,
+.img-article3:hover {
+    transform: scale(1.03);
+    filter: grayscale(50%) brightness(1);
+}
+
+.img-article2:hover {
+    transform: scale(1.03);
+    filter: grayscale(50%)
+}
+
+.div-img-article {
+    display: flex;
+    gap: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent,
+            #5e5e5e,
+            transparent);
+    margin: 9px 0 38px 0;
+
+}
+
+h3 {
+    color: white;
+    padding: 8px 0 14px;
+    font-size: clamp(18px, 1.8vw, 21px);
+    font-weight: 800;
+    font-family: "Finlandica Text", sans-serif;
+    letter-spacing: 1px;
+}
+
+.article-h3 {
+    max-width: 380px;
+    font-weight: 700;
+    font-size: 18.5px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1170px) {
+
+    .section-1 {
+        margin-left: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-article,
+    .img-article2,
+    .img-article3 {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .polemic1,
+    .polemic2,
+    .polemic3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 350px;
+    }
+
+    .article {
+        padding-left: 30px;
+    }
+
+    h3 {
+        padding: 0 0 15px 0;
+    }
+
+    .div-img-article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 25px;
+    }
+
+    .img-article2 {
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+    }
+
+    .img-article {
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+    }
+
+    .img-article3 {
+        width: 300px;
+        height: 350px;
+        object-fit: fill;
+    }
+
+        .section-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texts {
+        width: 100%;
+        align-items: center;
+    }
+
+    .img-section-1 {
+        width: 90%;
+        border-radius: 60px;
+    }
+
+    .txt1 {
+        font-size: 60px;
+    }
+
+    .p {
+        font-size: 20px;
+    }
+
+    .div-img-article {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        height: 100vh;
+        width: 220px;
+
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 80px 20px;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .txt1 {
+        font-size: 45px;
+    }
+
+    .p {
+        font-size: 18px;
+    }
+
+    .img-section-1 {
+        width: 100%;
+        border-radius: 40px 40px 80px 80px;
+    }
+
+    .time-img-1,
+    .time-img-2,
+    .time-img-3,
+    .time-img-4 {
+        width: 180px;
+    }
+
+    .article-h3 {
+        font-size: 16px;
+    }
+
+    .img-article,
+    .img-article2,
+    .img-article3 {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .div-img-article {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .txt1 {
+        font-size: 32px;
+    }
+
+    .p {
+        font-size: 16px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .time-h2,
+    .time-h22 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .texts {
+        padding: 0;
+    }
+}
+
+
+/* Arrumar os h2, arrumar a foto principal, fazer menu hamburguer, times em fotos estilo carrosel, tentar colocar um video. */
