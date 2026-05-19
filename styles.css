@@ -16,7 +16,7 @@ header {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     transition: transform 0.4s ease;
 }
 
@@ -160,14 +160,14 @@ body {
 .img-section-1 {
     width: clamp(480px, 52vw, 750px);
     height: auto;
-    transition: 0.7s;
+    transition: 0.7s ease-in-out;
     border-radius: 120px 120px 120px 40px;
-    filter: grayscale(50%);
+    filter: grayscale(15%);
 }
 
 .img-section-1:hover {
     transform: scale(1.03);
-    filter: grayscale(30%) brightness(1.1);
+    filter: brightness(1);
 }
 
 .p {
@@ -185,15 +185,15 @@ body {
     width: clamp(140px, 18vw, 260px);
     height: auto;
     border-radius: 100px;
-    transition: 0.7s ease;
-    filter: grayscale(85%) brightness(0.8);
+    transition: 0.4s ease;
+    filter: grayscale(35%) brightness(0.8);
 }
 
 .time-img-1:hover,
 .time-img-2:hover,
 .time-img-3:hover,
 .time-img-4:hover {
-    filter: grayscale(0%) brightness(1.3);
+    filter: brightness(1.3);
     transform: scale(1.02);
 }
 
@@ -217,7 +217,7 @@ body {
 }
 
 .time-img-3 {
-    width: clamp(160px, 20vw, 290px);
+    width: clamp(170px, 21vw, 300px);
     height: auto;
     position: relative;
     top: 5px;
@@ -243,9 +243,9 @@ body {
 .img-article,
 .img-article2,
 .img-article3 {
-    border-radius: 10px 60px 60px 40px;
+    border-radius: 7px 60px 60px 40px;
     transition: 0.5s ease;
-    filter: grayscale(70%) brightness(0.9);
+    filter: grayscale(35%) brightness(0.9);
     width: clamp(260px, 30vw, 380px);
     height: 380px;
 }
@@ -261,12 +261,12 @@ body {
 .img-article:hover,
 .img-article3:hover {
     transform: scale(1.03);
-    filter: grayscale(50%) brightness(1);
+    filter: grayscale(35%) brightness(1);
 }
 
 .img-article2:hover {
     transform: scale(1.03);
-    filter: grayscale(50%)
+    filter: grayscale(35%) brightness(1);
 }
 
 .div-img-article {
@@ -295,14 +295,24 @@ h3 {
 }
 
 .article-h3 {
-    max-width: 380px;
-    font-weight: 700;
-    font-size: 18.5px;
-    line-height: 1.4;
-    letter-spacing: 0.5px;
+    font-size: clamp(18px, 1.5vw, 19px);
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    max-width: 340px;
+    color: #d8d8d8;
+}
+
+.menu-toggle {
+    display: none;
+
 }
 
 @media (max-width: 1170px) {
+
+    a {
+        font-size: 23px;
+    }
 
     .section-1 {
         margin-left: 10px;
@@ -310,12 +320,18 @@ h3 {
         text-align: center;
     }
 
+    .time-h2,
+    .time-h22 {
+        font-size: 34px;
+    }
+
     .img-article,
-    .img-article2,
-    .img-article3 {
-        width: 300px;
+    .img-article2 {
+        width: clamp(380px, 50vw, 400px);
         height: auto;
-        object-fit: cover;
+        object-fit: fill;
+        filter: brightness(1);
+        box-shadow: 0px 0px 10px 0px #464646, 0px 0px 15px 0px #313131;
     }
 
     .polemic1,
@@ -336,12 +352,8 @@ h3 {
         max-width: 350px;
     }
 
-    .article {
-        padding-left: 30px;
-    }
-
     h3 {
-        padding: 0 0 15px 0;
+        margin: 0;
     }
 
     .div-img-article {
@@ -352,45 +364,45 @@ h3 {
         padding-left: 25px;
     }
 
-    .img-article2 {
-        width: 300px;
-        height: 300px;
-        object-fit: fill;
-    }
-
-    .img-article {
-        width: 300px;
-        height: 300px;
-        object-fit: fill;
-    }
-
     .img-article3 {
-        width: 300px;
-        height: 350px;
+        width: clamp(380px, 50vw, 400px);
+        height: clamp(380px, 50vw, 400px);
+        filter: brightness(0.9) grayscale(35%);
         object-fit: fill;
+        box-shadow: 0px 0px 10px 0px #464646, 0px 0px 15px 0px #313131;
     }
 
-        .section-1 {
-        flex-direction: column;
-        text-align: center;
+    .img-article:hover,
+    .img-article2:hover,
+    .img-article3:hover {
+        filter: brightness(0.9) grayscale(35%);
     }
 
     .texts {
         width: 100%;
         align-items: center;
+        max-width: 580px;
     }
 
     .img-section-1 {
         width: 90%;
         border-radius: 60px;
+        box-shadow: 0px 0px 10px 0px #464646, 0px 0px 15px 0px #313131;
     }
 
     .txt1 {
-        font-size: 60px;
+        font-size: 90px;
+        display: flex;
+        justify-content: center;
+        max-width: 20%;
+        padding: 0;
+        margin: 0;
     }
 
     .p {
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.2;
     }
 
     .div-img-article {
@@ -398,10 +410,25 @@ h3 {
         justify-content: center;
     }
 
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
+    .time-img-1,
+    .time-img-2,
+    .time-img-4 {
+        width: clamp(180px, 30vw, 220px);
+        padding-bottom: 6px;
+        height: auto;
+        filter: brightness(1);
     }
+
+    .time-img-3 {
+        width: clamp(200px, 30vw, 250px);
+        height: auto;
+        filter: brightness(1);
+    }
+
+    .article-h3 {
+        max-width: 200px;
+    }
+
 }
 
 
@@ -418,29 +445,29 @@ h3 {
     }
 
     nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-
-        height: 100vh;
-        width: 220px;
-
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-
         display: flex;
-        flex-direction: column;
         gap: 15px;
+        flex-wrap: wrap;
+        position: fixed;
+        right: -100%;
+        filter: blur(5px);
+        opacity: 0.8;
+        top: 0;
+        transition: 0.5s ease-in-out;
+        height: 100vh;
+    }
 
-        padding: 80px 20px;
-
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+    .menu-toggle {
+        display: block;
     }
 
     nav.active {
-        transform: translateX(0);
+        right: 0;
+
+        filter: blur(0);
+        opacity: 1;
     }
+
 
     header {
         padding: 15px 20px;
@@ -497,10 +524,6 @@ h3 {
         font-size: 16px;
     }
 
-    nav {
-        display: none;
-    }
-
     .time-h2,
     .time-h22 {
         font-size: 24px;
@@ -513,4 +536,4 @@ h3 {
 }
 
 
-/* Arrumar os h2, arrumar a foto principal, fazer menu hamburguer, times em fotos estilo carrosel, tentar colocar um video. */
+/* fazer menu hamburguer, times em fotos estilo carrosel, tentar colocar um video. */
