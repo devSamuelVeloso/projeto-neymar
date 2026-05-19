@@ -308,6 +308,29 @@ h3 {
 
 }
 
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.aside-h2 {
+    margin: 0 0 0 30px;
+    font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
+}
+
+.img-aside {
+    border-radius: 7px 60px 60px 40px;
+    transition: 0.5s ease;
+    filter: grayscale(35%) brightness(0.9);
+    width: clamp(260px, 30vw, 380px);
+    height: 380px;
+}
+
+
 @media (max-width: 1170px) {
 
     a {
